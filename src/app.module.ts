@@ -1,23 +1,23 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
+import { UsersModule } from './api/users/users.module';
 
-import { User } from './users/users.model';
-import { Role } from './roles/roles.model';
-import { UserRoles } from './roles/user-roles.model';
-import {News} from './news/news.model';
+import { User } from './models/users.model';
+import { Role } from './models/roles.model';
+import { UserRoles } from './models/user-roles.model';
+import {News} from './models/news.model';
 
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
-import { RolesModule } from './roles/roles.module';
-import { AuthModule } from './auth/auth.module';
-import { NewsModule } from './news/news.module';
-import { CommentsModule } from './comments/comments.module';
-import { NewsRatingModule } from './news-rating/news-rating.module';
+import { RolesModule } from './api/roles/roles.module';
+import { AuthModule } from './api/auth/auth.module';
+import { NewsModule } from './api/news/news.module';
+import { CommentsModule } from './api/comments/comments.module';
+import { NewsRatingModule } from './api/news-rating/news-rating.module';
 
-import { UserComments } from './comments/comments.model';
-import { NewsRating } from './news-rating/rating.model';
+import { UserComments } from './models/comments.model';
+import { NewsRating } from './models/rating.model';
 
 @Module({
   imports: [
