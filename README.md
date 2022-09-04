@@ -1,3 +1,6 @@
+## swagger
+base_url/api/docs
+
 ## Installation
 
 ```bash
