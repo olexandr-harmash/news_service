@@ -1,10 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateRatingsDto {
-  @ApiProperty({ example: 'harmash.alex@gmail.com', description: 'user email' })
+  @ApiProperty({ example: '15', description: 'user`s id who posting rating' })
   readonly userId: number;
-  @ApiProperty({ example: 'DA@hada$)+kk2djal3', description: 'user password' })
+  @ApiProperty({ example: '57', description: 'news`id' })
   readonly newsId: number;
-  @ApiProperty({ example: 'DA@hada$)+kk2djal3', description: 'user password' })
+  @ApiProperty({ example: '4', description: 'rating 0-5' })
   readonly rating: number;
 }

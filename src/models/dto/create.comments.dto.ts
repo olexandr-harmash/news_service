@@ -1,10 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateCommentsDto {
-  @ApiProperty({ example: 'harmash.alex@gmail.com', description: 'user email' })
+  @ApiProperty({ example: '15', description: 'user`s id who posting comments' })
   readonly userId: number;
-  @ApiProperty({ example: 'DA@hada$)+kk2djal3', description: 'user password' })
+  @ApiProperty({ example: '15', description: 'news`s id that will include comments' })
   readonly newsId: number;
-  @ApiProperty({ example: 'DA@hada$)+kk2djal3', description: 'user password' })
+  @ApiProperty({example:'It was great!!!', description:'content'})
   readonly comment: string;
 }

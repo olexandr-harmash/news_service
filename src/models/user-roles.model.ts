@@ -22,7 +22,7 @@ export class UserRoles extends Model <UserRoles> {
     roleId: string;
 
     @ForeignKey(()=>User)
-  @ApiProperty({example:'321332423', description:'user id'})
+    @ApiProperty({example:'321332423', description:'user id'})
     @Column({
       type: DataType.INTEGER
     })

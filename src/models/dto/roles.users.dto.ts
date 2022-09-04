@@ -8,7 +8,7 @@ export class AddRoleDto {
   @IsEnum(UserRole)
   readonly value: string;
 
-  @ApiProperty({example:'56', description:'user id'})
+  @ApiProperty({example:'cathanter@jungle.com', description:'user`s email who take new role'})
   @IsEmail({}, {message: 'must be a namber'})
   readonly userEmail: string;
 }

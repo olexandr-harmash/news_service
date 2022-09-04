@@ -26,27 +26,28 @@ export class News extends Model<News, NewsCreatedAttr> {
   })
   status: string;
 
-  @ApiProperty({ example: 'admin', description: 'user role' })
+  @ApiProperty({ example: 'about USA', description: 'news title' })
   @Column({
     type: DataType.STRING,
     allowNull: false
   })
   title: string;
 
-  @ApiProperty({ example: 'can all', description: 'role tips' })
+  @ApiProperty({ example: 'something about enimals', description: 'news content' })
   @Column({
     type: DataType.STRING,
     allowNull: false
   })
   content: string;
 
-  @ApiProperty({ example: 'can all', description: 'role tips' })
+  @ApiProperty({ example: '4.5', description: 'average rating min 0 max 5' })
   @Column({
-    type: DataType.INTEGER,
+    type: DataType.DOUBLE,
     defaultValue: 0,
   })
   averageRating: number;
 
+  @ApiProperty({ example: '48', description: 'user who posted news' })
   @ForeignKey(() => User)
   @Column({
     type: DataType.INTEGER
@@ -56,9 +57,11 @@ export class News extends Model<News, NewsCreatedAttr> {
   @BelongsTo(() => User)
   author: User;
 
+  @ApiProperty({ example: 'wow really good...', description: 'array of comments struct' })
   @HasMany(() => UserComments)
   comments: UserComments[];
 
+  @ApiProperty({ example: '[{3...}, ...]', description: 'array of rating struct' })
   @HasMany(() => NewsRating)
   ratings: NewsRating[];
 }

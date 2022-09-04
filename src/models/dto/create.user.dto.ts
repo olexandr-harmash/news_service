@@ -12,8 +12,4 @@ export class CreateUserDto {
   @IsString({message: 'must be string'})
   @Length(8, 16, {message: 'must be 8-16 symbols'})
   readonly password: string;
-
-  // @ApiProperty({example:'user', description:'user role'})
-  // @IsEnum(UserRole)
-  // readonly role: string;
 }

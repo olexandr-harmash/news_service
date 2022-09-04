@@ -9,7 +9,7 @@ export enum Status {
 export class EditStatusParams {
   @ApiProperty({ example: '5', description: 'news`s id (params)' })
   id: number
-  @ApiProperty({ example: 'admin', description: 'status published or pending approval (params)' })
+  @ApiProperty({ example: 'pending', description: 'status published or pending approval (params)' })
   @IsEnum(Status)
   status: Status
 }
