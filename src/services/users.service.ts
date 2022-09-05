@@ -51,7 +51,7 @@ export class UsersService {
 
   async createUser(dto: CreateUserDto) {
     try {
-      const hash = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10)
+      const hash = await bcrypt.hash(dto.password, 10)
       const role = await this.roleService.getRoleByValue('default');
       const user = await this.userRepository.create({ ...dto, password: hash });
       if (user) {
